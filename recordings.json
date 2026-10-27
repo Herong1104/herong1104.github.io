@@ -13,6 +13,18 @@
     "localSrc": "media-original/brahms-original.mp4"
   },
   {
+    "id": "grieg",
+    "composer": "Edvard Grieg",
+    "title": "Piano Concerto in A minor, Op. 16",
+    "zh": "a小调钢琴协奏曲，作品16",
+    "detail": "Ningxia People’s Theatre · 8 February 2026 · Qu Xin, conductor",
+    "detailzh": "宁夏人民剧院 · 2026年2月8日 · 指挥：曲鑫",
+    "duration": "13:06",
+    "poster": "video-grieg.jpg",
+    "localSrc": "media-original/grieg-2026-original.mp4",
+    "src": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/grieg-2026-original.mp4"
+  },
+  {
     "id": "etudes",
     "composer": "Stephen Elsinger",
     "title": "Gratitude",

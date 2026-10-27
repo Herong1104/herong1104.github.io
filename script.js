@@ -14,8 +14,19 @@ function setLanguage(next) {
   const toggle = document.getElementById('language');
   toggle.innerHTML = next === 'en' ? 'EN <span>/ 中文</span>' : '中文 <span>/ EN</span>';
   toggle.setAttribute('aria-label', next === 'en' ? 'Switch to Chinese' : '切换到英文');
-  const suffix = {About:next === 'en' ? 'Biography' : '个人介绍', CV:'CV', Etudes:'BMC Etudes Project'}[document.body.dataset.page];
+  const titles = {
+    Home:['Pianist','钢琴演奏者'], Music:['Music','音乐'], Community:['Community','公益'],
+    Research:['Research & Inquiry','研究与探索'], About:['Biography','个人介绍'],
+    Contact:['Contact','联系'], Press:['Press & Media','新闻与媒体'], CV:['CV','CV'],
+    Etudes:['BMC Etudes Project','BMC Etudes Project'],
+    MusicMath:['Mathematics & Music','数学与音乐'], Aviation:['Aviation Data & AI','航空数据与 AI'],
+    Economics:['Economics & Public Policy','经济学与公共政策']
+  };
+  const suffix = titles[document.body.dataset.page]?.[next === 'en' ? 0 : 1];
   document.title = 'Herong Bai' + (suffix ? ` — ${suffix}` : '');
+  document.querySelectorAll('[data-alt-en][data-alt-zh]').forEach(element => {
+    element.alt = next === 'en' ? element.dataset.altEn : element.dataset.altZh;
+  });
   document.dispatchEvent(new Event('languagechange'));
   try { localStorage.setItem('herong-language', next); } catch {}
 }
@@ -69,7 +80,7 @@ if (dialog) {
   function loadCatalogue() {
     if (recordings) return Promise.resolve(recordings);
     if (pendingCatalogue) return pendingCatalogue;
-    pendingCatalogue = fetch('recordings.json?v=20261027-final', {cache:'no-cache'})
+    pendingCatalogue = fetch('recordings.json?v=20261028-publish', {cache:'no-cache'})
       .then(response => { if (!response.ok) throw new Error('Recording list unavailable'); return response.json(); })
       .then(data => { if (!Array.isArray(data)) throw new Error('Invalid recording list'); recordings = data; return data; })
       .finally(() => { pendingCatalogue = undefined; });
@@ -188,5 +199,23 @@ if (dialog) {
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
   });
   document.addEventListener('languagechange', updateUI);
+}
+const pressFilters = document.querySelectorAll('[data-filter]');
+if (pressFilters.length) {
+  let category = 'all';
+  function filterPress() {
+    let count = 0;
+    document.querySelectorAll('.press-list .press-entry').forEach(entry => {
+      entry.hidden = category !== 'all' && entry.dataset.category !== category;
+      if (!entry.hidden) count += 1;
+    });
+    pressFilters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === category)));
+    document.getElementById('press-count').textContent = language === 'en' ? `${count} archive entries` : `${count} 项媒体档案`;
+  }
+  pressFilters.forEach(button => button.addEventListener('click', () => {
+    category = button.dataset.filter;
+    filterPress();
+  }));
+  document.addEventListener('languagechange', filterPress);
 }
 setLanguage(language);
