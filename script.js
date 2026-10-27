@@ -69,7 +69,7 @@ if (dialog) {
   function loadCatalogue() {
     if (recordings) return Promise.resolve(recordings);
     if (pendingCatalogue) return pendingCatalogue;
-    pendingCatalogue = fetch('recordings.json?v=20261027-review', {cache:'no-cache'})
+    pendingCatalogue = fetch('recordings.json?v=20261027-final', {cache:'no-cache'})
       .then(response => { if (!response.ok) throw new Error('Recording list unavailable'); return response.json(); })
       .then(data => { if (!Array.isArray(data)) throw new Error('Invalid recording list'); recordings = data; return data; })
       .finally(() => { pendingCatalogue = undefined; });
@@ -161,7 +161,7 @@ if (dialog) {
     }
   });
   video.addEventListener('loadedmetadata', () => {
-    if (dialog.open && video.paused && state !== 'failed' && state !== 'decode') { play.hidden = false; setState('ready'); }
+    if (dialog.open && video.paused && state !== 'failed' && state !== 'decode') { clearTimeout(waitingTimer); error.hidden = true; retry.hidden = true; play.hidden = false; setState('ready'); }
   });
   video.addEventListener('playing', () => {
     clearTimeout(waitingTimer); error.hidden = true; retry.hidden = true; play.hidden = true; setState('playing');

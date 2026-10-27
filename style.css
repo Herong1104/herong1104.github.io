@@ -43,7 +43,7 @@ body[data-page="About"]>header,body[data-page="About"]>footer{position:relative;
 .etudes-programme .herong-programme-item{background:#d1b77c0e;border-bottom-color:#b99c6070}
 .video-stage{position:relative;background:#000;aspect-ratio:16/9;max-height:66svh;margin-inline:auto;display:grid;place-items:center}
 .video-stage #performance-video{height:100%;max-height:66svh;aspect-ratio:16/9}
-#video-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#10100fe8;min-width:150px;text-align:center}
+#video-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#10100fe8;color:var(--gold);min-width:150px;text-align:center}
 #video-status{min-height:22px;font-size:12px;color:#d1bc8a;margin-top:12px}
 #retry-video{margin-right:18px;margin-top:8px}
 #video-error{margin-bottom:8px}
