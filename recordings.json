@@ -7,7 +7,22 @@
     "detail": "“Edward”",
     "detailzh": "“爱德华”",
     "duration": "4:29",
-    "src": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/brahms.mp4"
+    "src": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/brahms-original.mp4",
+    "poster": "video-brahms.jpg",
+    "legacySrc": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/brahms.mp4",
+    "localSrc": "media-original/brahms-original.mp4"
+  },
+  {
+    "id": "etudes",
+    "composer": "Stephen Elsinger",
+    "title": "Gratitude",
+    "zh": "Gratitude",
+    "detail": "BMC Etudes Project 2026 · Parker Concert Hall · 23 July 2026",
+    "detailzh": "BMC Etudes Project 2026 · Parker Concert Hall · 2026年7月23日",
+    "duration": "3:33",
+    "poster": "etudes-project.jpg",
+    "localSrc": "media-original/etudes-gratitude-original.mp4",
+    "src": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/etudes-gratitude-original.mp4"
   },
   {
     "id": "beethoven",
@@ -17,7 +32,10 @@
     "detail": "“Waldstein” · I. Allegro con brio",
     "detailzh": "“黎明” · 第一乐章：灿烂的快板",
     "duration": "8:59",
-    "src": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/beethoven.mp4"
+    "src": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/beethoven-original.mp4",
+    "poster": "video-beethoven.jpg",
+    "legacySrc": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/beethoven.mp4",
+    "localSrc": "media-original/beethoven-original.mp4"
   },
   {
     "id": "bach",
@@ -27,7 +45,10 @@
     "detail": "The Well-Tempered Clavier, Book II",
     "detailzh": "《平均律键盘曲集》第二卷",
     "duration": "3:52",
-    "src": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/bach.mp4"
+    "src": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/bach-original.mp4",
+    "poster": "video-bach.jpg",
+    "legacySrc": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/bach.mp4",
+    "localSrc": "media-original/bach-original.mp4"
   },
   {
     "id": "chopin",
@@ -37,6 +58,9 @@
     "detail": "I. Grave – Doppio movimento",
     "detailzh": "第一乐章：庄板—加倍的速度",
     "duration": "5:47",
-    "src": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/chopin.mp4"
+    "src": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/chopin-original.mp4",
+    "poster": "video-chopin.jpg",
+    "legacySrc": "https://github.com/Herong1104/herong1104.github.io/releases/download/performances-2026/chopin.mp4",
+    "localSrc": "media-original/chopin-original.mp4"
   }
 ]
