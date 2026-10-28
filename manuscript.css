@@ -1,0 +1,16 @@
+
+.watermarked-manuscript{position:relative;isolation:isolate;padding:18px 0 8px;scroll-margin-top:35px}
+.watermarked-manuscript::before{content:'';position:absolute;inset:0;z-index:-1;background-image:url('manuscript-watermark.svg');background-repeat:repeat;background-size:570px 460px;pointer-events:none;opacity:.095}
+.manuscript-provenance{font-family:'Herong Inter',Arial,sans-serif;font-size:11px;letter-spacing:1.8px;color:var(--gold);margin:0 0 28px!important}
+.manuscript-language-links{display:flex;flex-wrap:wrap;gap:15px 30px;margin:15px 0 40px;justify-content:flex-start;font-size:12px}
+.manuscript-language-links a{border-bottom:1px solid var(--line);padding-bottom:6px}
+.english-manuscript .english-manuscript-title{font-family:'Herong Baskerville',Georgia,serif;font-size:25px;line-height:1.6;color:var(--gold);margin-bottom:32px!important}
+.english-manuscript h3{font-family:'Herong Inter',Arial,sans-serif;font-weight:500;font-size:23px;margin:42px 0 23px;line-height:1.55}
+.english-manuscript h4{font-family:'Herong Inter',Arial,sans-serif;font-weight:500;font-size:19px;color:var(--gold);margin:32px 0 22px;line-height:1.6}
+.english-manuscript p{font-size:17.5px;line-height:1.82;overflow-wrap:break-word}
+.english-manuscript sub,.english-manuscript sup{font-size:.72em;line-height:0}
+.english-manuscript .manuscript-ownership{font-size:12px;line-height:1.9;color:var(--muted);margin-top:40px;padding-top:10px}
+.original-language-label{margin-top:65px!important}
+.original-manuscript.watermarked-manuscript::before{background-size:570px 460px}
+@media(max-width:650px){.watermarked-manuscript::before,.original-manuscript.watermarked-manuscript::before{background-size:410px 390px;opacity:.1}.english-manuscript .english-manuscript-title{font-size:21px}.english-manuscript p{font-size:17px;line-height:1.82}.english-manuscript h3{font-size:21px}.english-manuscript h4{font-size:18px}}
+@media print{.watermarked-manuscript::before{opacity:.16;print-color-adjust:exact;-webkit-print-color-adjust:exact}}

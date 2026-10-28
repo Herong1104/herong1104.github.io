@@ -1,0 +1,12 @@
+.hero-paths{display:flex;justify-content:flex-start;flex-wrap:wrap;gap:14px 28px;margin:22px 0 0;font-size:12px;letter-spacing:.2px}
+.hero-paths a{border-bottom:1px solid #b99c6070;padding-bottom:4px;color:var(--gold)}
+.mathematics-intro{margin-top:20px;font-size:15px;line-height:1.9;color:var(--text)}
+.mathematics-feature{padding-top:90px;padding-bottom:25px;scroll-margin-top:45px}
+.mathematics-feature>.eyebrow{font-size:10px;letter-spacing:1.6px;color:var(--muted);margin-bottom:28px}
+.mathematics-feature-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start}
+.mathematics-feature h2{font-size:39px;line-height:1.4;max-width:420px;letter-spacing:-.35px}
+.mathematics-feature-subtitle{font-size:13px;line-height:1.9;color:var(--gold);margin-top:21px}
+.mathematics-feature-copy>p:first-child{font-size:18px;line-height:1.85;margin:0 0 26px}
+.mathematics-feature .manuscript-language-note{font-size:11px;color:var(--muted);margin-top:17px;line-height:1.8}
+@media(max-width:1050px){.mathematics-feature-layout{gap:42px}.mathematics-feature h2{font-size:33px}.mathematics-feature-copy>p:first-child{font-size:17px}}
+@media(max-width:650px){.hero-paths{margin-top:20px;gap:13px 24px;font-size:11px}.mathematics-intro{font-size:14px}.mathematics-feature{padding-top:55px;padding-bottom:5px}.mathematics-feature>.eyebrow{font-size:9px;margin-bottom:23px}.mathematics-feature-layout{grid-template-columns:1fr;gap:25px}.mathematics-feature h2{font-size:31px;max-width:330px}.mathematics-feature-subtitle{margin-top:16px}.mathematics-feature-copy>p:first-child{font-size:17px;line-height:1.9}}
