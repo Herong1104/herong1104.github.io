@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="710" viewBox="0 0 640 710" role="img" aria-labelledby="ws-title ws-desc" style="max-width:100%;height:auto">
+  <title id="ws-title">Wind-Shear Monitoring</title>
+  <desc id="ws-desc">Conceptual system relationship diagram based on the supplied project description, not a project internal architecture. LiDAR, wind-profiler radar and automatic weather stations feed a common spatial and temporal reference, preprocessing, detection, then monitoring and early warning. No protocols, equipment models or deployment parameters are specified.</desc>
+  <defs><marker id="ws-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M1 1 L6 3.5 L1 6" fill="none" stroke="#d1b77c" stroke-width="1.2"/></marker></defs>
+  <style>
+    text{font-family:Inter,'Helvetica Neue',Arial,sans-serif;fill:#cabea2;font-weight:400}
+    .title{font-family:Baskerville,Georgia,serif;font-size:27px;fill:#d1b77c}
+    .sub{font-size:14px;fill:#a79b80}
+    .label{font-size:22px;fill:#d1b77c}
+    .small{font-size:16px;fill:#b8ac92}
+    .note{font-size:14px;fill:#a79b80}
+    .box{fill:#10100e;stroke:#806c47;stroke-width:1.2}
+    .flow{fill:none;stroke:#d1b77c;stroke-width:1.5;marker-end:url(#ws-arrow)}
+    .bus{fill:none;stroke:#a18a59;stroke-width:1.2}
+  </style>
+  <rect width="640" height="710" fill="#090909"/>
+  <text class="title" x="40" y="47">Wind-Shear Monitoring</text>
+  <text class="sub" text-anchor="start" x="40" y="79"><tspan x="40" dy="0">Relationships described in the project overview</tspan></text>
+  <rect class="box" x="40" y="115" width="170" height="84"/>
+  <g style="font-size:18px">  <text class="label" style="font-size:18px" text-anchor="middle" x="125.0" y="164.0"><tspan x="125.0" dy="0">LiDAR</tspan></text>
+</g>
+  <rect class="box" x="235" y="115" width="170" height="84"/>
+  <g style="font-size:18px">  <text class="label" style="font-size:18px" text-anchor="middle" x="320.0" y="150.5"><tspan x="320.0" dy="0">Wind-profiler</tspan><tspan x="320.0" dy="27">radar</tspan></text>
+</g>
+  <rect class="box" x="430" y="115" width="170" height="84"/>
+  <g style="font-size:18px">  <text class="label" style="font-size:18px" text-anchor="middle" x="515.0" y="150.5"><tspan x="515.0" dy="0">Automatic</tspan><tspan x="515.0" dy="27">weather stations</tspan></text>
+</g>
+  <path class="bus" d="M125 200 V225 H515 V200"/>
+  <path class="bus" d="M320 200 V225"/>
+  <path class="flow" d="M320 225 V250"/>
+  <rect class="box" x="100" y="263" width="440" height="74"/>
+  <g style="font-size:20px">  <text class="label" style="font-size:20px" text-anchor="middle" x="320.0" y="307.0"><tspan x="320.0" dy="0">Common spatial &amp; temporal reference</tspan></text>
+</g>
+  <rect class="box" x="100" y="371" width="440" height="65"/>
+  <text class="label" text-anchor="middle" x="320.0" y="410.5"><tspan x="320.0" dy="0">Data preprocessing</tspan></text>
+  <rect class="box" x="100" y="470" width="440" height="65"/>
+  <text class="label" text-anchor="middle" x="320.0" y="509.5"><tspan x="320.0" dy="0">Algorithm detection</tspan></text>
+  <rect class="box" x="100" y="569" width="440" height="65"/>
+  <text class="label" text-anchor="middle" x="320.0" y="608.5"><tspan x="320.0" dy="0">Monitoring &amp; early warning</tspan></text>
+  <path class="flow" d="M320 343 V365"/>
+  <path class="flow" d="M320 442 V464"/>
+  <path class="flow" d="M320 541 V563"/>
+  <text class="note" text-anchor="start" x="40" y="671"><tspan x="40" dy="0">Conceptual illustration from the supplied project description.</tspan><tspan x="40" dy="20">Not the project’s internal system architecture; no operational data.</tspan></text>
+</svg>

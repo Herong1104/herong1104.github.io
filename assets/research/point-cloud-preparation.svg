@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="680" viewBox="0 0 640 680" role="img" aria-labelledby="pc-title pc-desc" style="max-width:100%;height:auto">
+  <title id="pc-title">Point-Cloud Preparation</title>
+  <desc id="pc-desc">Conceptual data-processing sequence: raw point clouds, denoising, registration, segmentation and standardised dataset preparation for training and evaluation. It contains no real or simulated point-cloud sample and no airport test data.</desc>
+  <defs><marker id="pc-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M1 1 L6 3.5 L1 6" fill="none" stroke="#d1b77c" stroke-width="1.2"/></marker></defs>
+  <style>
+    text{font-family:Inter,'Helvetica Neue',Arial,sans-serif;fill:#cabea2;font-weight:400}
+    .title{font-family:Baskerville,Georgia,serif;font-size:27px;fill:#d1b77c}
+    .sub{font-size:14px;fill:#a79b80}
+    .label{font-size:22px;fill:#d1b77c}
+    .small{font-size:16px;fill:#b8ac92}
+    .note{font-size:14px;fill:#a79b80}
+    .box{fill:#10100e;stroke:#806c47;stroke-width:1.2}
+    .flow{fill:none;stroke:#d1b77c;stroke-width:1.5;marker-end:url(#pc-arrow)}
+    .bus{fill:none;stroke:#a18a59;stroke-width:1.2}
+  </style>
+  <rect width="640" height="680" fill="#090909"/>
+  <text class="title" x="40" y="47">Point-Cloud Preparation</text>
+  <text class="sub" text-anchor="start" x="40" y="79"><tspan x="40" dy="0">A processing sequence, without sample data</tspan></text>
+  <rect class="box" x="100" y="112" width="440" height="66"/>
+  <text class="label" text-anchor="middle" x="320.0" y="152.0"><tspan x="320.0" dy="0">Raw point clouds</tspan></text>
+  <rect class="box" x="100" y="211" width="440" height="66"/>
+  <text class="label" text-anchor="middle" x="320.0" y="251.0"><tspan x="320.0" dy="0">Denoising</tspan></text>
+  <rect class="box" x="100" y="310" width="440" height="66"/>
+  <text class="label" text-anchor="middle" x="320.0" y="350.0"><tspan x="320.0" dy="0">Registration</tspan></text>
+  <rect class="box" x="100" y="409" width="440" height="66"/>
+  <text class="label" text-anchor="middle" x="320.0" y="449.0"><tspan x="320.0" dy="0">Segmentation</tspan></text>
+  <rect class="box" x="100" y="508" width="440" height="66"/>
+  <text class="label" text-anchor="middle" x="320.0" y="548.0"><tspan x="320.0" dy="0">Standardised datasets</tspan></text>
+  <path class="flow" d="M320 184 V205"/>
+  <path class="flow" d="M320 283 V304"/>
+  <path class="flow" d="M320 382 V403"/>
+  <path class="flow" d="M320 481 V502"/>
+  <text class="small" text-anchor="middle" x="320" y="602"><tspan x="320" dy="0">Prepared for model training and evaluation</tspan></text>
+  <text class="note" text-anchor="start" x="40" y="646"><tspan x="40" dy="0">Conceptual sequence; no real or simulated point-cloud data shown.</tspan></text>
+</svg>

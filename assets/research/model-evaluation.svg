@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="615" viewBox="0 0 640 615" role="img" aria-labelledby="me-title me-desc" style="max-width:100%;height:auto">
+  <title id="me-title">Model Evaluation</title>
+  <desc id="me-desc">Conceptual evaluation diagram. Comparative experiments and ablation studies feed quantitative evaluation using metrics including mean average precision, mAP. Results must then be interpreted alongside conditions, limitations and possible failure cases. No metric values, model rankings or performance claims are presented.</desc>
+  <defs><marker id="me-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M1 1 L6 3.5 L1 6" fill="none" stroke="#d1b77c" stroke-width="1.2"/></marker></defs>
+  <style>
+    text{font-family:Inter,'Helvetica Neue',Arial,sans-serif;fill:#cabea2;font-weight:400}
+    .title{font-family:Baskerville,Georgia,serif;font-size:27px;fill:#d1b77c}
+    .sub{font-size:14px;fill:#a79b80}
+    .label{font-size:22px;fill:#d1b77c}
+    .small{font-size:16px;fill:#b8ac92}
+    .note{font-size:14px;fill:#a79b80}
+    .box{fill:#10100e;stroke:#806c47;stroke-width:1.2}
+    .flow{fill:none;stroke:#d1b77c;stroke-width:1.5;marker-end:url(#me-arrow)}
+    .bus{fill:none;stroke:#a18a59;stroke-width:1.2}
+  </style>
+  <rect width="640" height="615" fill="#090909"/>
+  <text class="title" x="40" y="47">Model Evaluation</text>
+  <text class="sub" text-anchor="start" x="40" y="79"><tspan x="40" dy="0">Inspecting changes, evidence and limitations</tspan></text>
+  <rect class="box" x="40" y="120" width="250" height="100"/>
+  <text class="label" text-anchor="middle" x="165.0" y="163.5"><tspan x="165.0" dy="0">Comparative</tspan><tspan x="165.0" dy="27">experiments</tspan></text>
+  <rect class="box" x="350" y="120" width="250" height="100"/>
+  <text class="label" text-anchor="middle" x="475.0" y="163.5"><tspan x="475.0" dy="0">Ablation</tspan><tspan x="475.0" dy="27">studies</tspan></text>
+  <text class="small" text-anchor="middle" x="165" y="251"><tspan x="165" dy="0">Compare model variants</tspan></text>
+  <text class="small" text-anchor="middle" x="475" y="251"><tspan x="475" dy="0">Vary or remove components</tspan></text>
+  <path class="bus" d="M165 266 V286 H475 V266"/>
+  <path class="flow" d="M320 286 V308"/>
+  <rect class="box" x="100" y="320" width="440" height="92"/>
+  <text class="label" text-anchor="middle" x="320.0" y="358"><tspan x="320.0" dy="0">Quantitative evaluation</tspan></text>
+  <text class="small" text-anchor="middle" x="320" y="392"><tspan x="320" dy="0">Metrics can include mAP</tspan></text>
+  <path class="flow" d="M320 425 V452"/>
+  <rect class="box" x="100" y="465" width="440" height="76"/>
+  <g style="font-size:21px">  <text class="label" style="font-size:21px" text-anchor="middle" x="320.0" y="510.0"><tspan x="320.0" dy="0">Inspect effects &amp; limitations</tspan></text>
+</g>
+  <text class="note" text-anchor="start" x="40" y="587"><tspan x="40" dy="0">Conceptual illustration; no scores, rankings or results shown.</tspan></text>
+</svg>

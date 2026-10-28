@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="540" viewBox="0 0 640 540" role="img" aria-labelledby="fd-title fd-desc" style="max-width:100%;height:auto">
+  <title id="fd-title">Flight Data &amp; Recovery</title>
+  <desc id="fd-desc">Conceptual workflow. More than 300,000 operational flight records pass through data cleaning and integration, time-series construction, and traffic recovery analysis. No flight counts by month, recovery curves, rates, or statistical findings are shown.</desc>
+  <defs><marker id="fd-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M1 1 L6 3.5 L1 6" fill="none" stroke="#d1b77c" stroke-width="1.2"/></marker></defs>
+  <style>
+    text{font-family:Inter,'Helvetica Neue',Arial,sans-serif;fill:#cabea2;font-weight:400}
+    .title{font-family:Baskerville,Georgia,serif;font-size:27px;fill:#d1b77c}
+    .sub{font-size:14px;fill:#a79b80}
+    .label{font-size:22px;fill:#d1b77c}
+    .small{font-size:16px;fill:#b8ac92}
+    .note{font-size:14px;fill:#a79b80}
+    .box{fill:#10100e;stroke:#806c47;stroke-width:1.2}
+    .flow{fill:none;stroke:#d1b77c;stroke-width:1.5;marker-end:url(#fd-arrow)}
+    .bus{fill:none;stroke:#a18a59;stroke-width:1.2}
+  </style>
+  <rect width="640" height="540" fill="#090909"/>
+  <text class="title" x="40" y="47">Flight Data &amp; Recovery</text>
+  <text class="sub" text-anchor="start" x="40" y="79"><tspan x="40" dy="0">From records to an interpretable time series</tspan></text>
+  <rect class="box" x="40" y="120" width="250" height="112"/>
+  <text class="label" text-anchor="middle" x="165.0" y="155"><tspan x="165.0" dy="0">Raw operational</tspan><tspan x="165.0" dy="27">records</tspan></text>
+  <text class="small" text-anchor="middle" x="165" y="217"><tspan x="165" dy="0">300,000+ records</tspan></text>
+  <rect class="box" x="350" y="120" width="250" height="112"/>
+  <text class="label" text-anchor="middle" x="475.0" y="169.5"><tspan x="475.0" dy="0">Data cleaning</tspan><tspan x="475.0" dy="27">&amp; integration</tspan></text>
+  <rect class="box" x="350" y="310" width="250" height="112"/>
+  <text class="label" text-anchor="middle" x="475.0" y="359.5"><tspan x="475.0" dy="0">Time-series</tspan><tspan x="475.0" dy="27">construction</tspan></text>
+  <rect class="box" x="40" y="310" width="250" height="112"/>
+  <text class="label" text-anchor="middle" x="165.0" y="359.5"><tspan x="165.0" dy="0">Traffic recovery</tspan><tspan x="165.0" dy="27">analysis</tspan></text>
+  <path class="flow" d="M302 176 H337"/>
+  <path class="flow" d="M475 245 V297"/>
+  <path class="flow" d="M337 366 H302"/>
+  <text class="note" text-anchor="start" x="40" y="480"><tspan x="40" dy="0">Conceptual workflow; no operational data or recovery results shown.</tspan></text>
+</svg>
