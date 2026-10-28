@@ -19,8 +19,9 @@ function setLanguage(next) {
     Research:['Research & Inquiry','研究与探索'], About:['Biography','个人介绍'],
     Contact:['Contact','联系'], Press:['Press & Media','新闻与媒体'], CV:['CV','CV'],
     Etudes:['BMC Etudes Project','BMC Etudes Project'],
-    MusicMath:['Mathematics & Music','数学与音乐'], Aviation:['Aviation Data & AI','航空数据与 AI'],
-    Economics:['Economics & Public Policy','经济学与公共政策']
+    MusicMath:['Mathematics & Music','数学与音乐'], Aviation:['Aviation Research','航空研究'],
+    Economics:['Economics & Public Policy','经济学与公共政策'],
+    MathEducation:['Mathematics & Education','数学与教育']
   };
   const suffix = titles[document.body.dataset.page]?.[next === 'en' ? 0 : 1];
   document.title = 'Herong Bai' + (suffix ? ` — ${suffix}` : '');
