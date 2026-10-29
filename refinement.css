@@ -1,0 +1,24 @@
+/* Preview: modestly stronger screen type, matte warm charcoal and champagne gold.
+   Existing font files, content, image composition, media and print styles stay in use. */
+@media screen{
+ :root{--black:#11110f;--panel:#181814;--gold:#dfc391;--text:#d4c7ab;--muted:#ac9e83;--line:#c4aa6b38}
+ body{background:var(--black);color:var(--text);font-weight:450}
+ header{background:#0e0e0c}
+ footer{background:#0e0e0c}
+ h1,h2,h3,h4,.hero h1,.page-heading h1,.section-heading h2,.featured-recording h3,.news-story h3,.portfolio-list h3,.story-copy h3,.editorial-story h2,.editorial-story h3{font-weight:550}
+ .intro{font-weight:450}
+ .wordmark,header nav,#language,.text-link{font-weight:550}
+ .hero-caption,.recording .composer,.eyebrow{font-weight:500}
+ .quiet,.work-detail,.manuscript-language-note,figcaption{font-weight:400}
+ .hero-shade{background:linear-gradient(0deg,#11110f 0%,#11110fbd 12%,transparent 52%)}
+ .introduction+.mathematics-feature{padding-top:30px}
+ /* Preserve the supplied manuscript and signature typography. */
+ .original-manuscript,.english-manuscript{font-weight:400}
+ .source-equation{font-weight:400}
+ .bio-scene-content .page-heading h1{font-weight:400}
+ body[data-page="About"]{background:#090909}
+ @media(max-width:650px){
+  .hero-shade{background:linear-gradient(0deg,#11110f 0%,#11110fef 15%,transparent 50%)}
+  .introduction+.mathematics-feature{padding-top:35px}
+ }
+}
