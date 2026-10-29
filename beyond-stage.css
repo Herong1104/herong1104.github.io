@@ -1,0 +1,22 @@
+/* Homepage Beyond the Stage only. Existing global theme and other sections stay in use. */
+#community.community-overview .beyond-grid{display:grid;grid-template-columns:3fr 4fr;gap:44px;align-items:stretch}
+#community.community-overview .beyond-project{min-width:0;display:flex;flex-direction:column;scroll-margin-top:35px}
+#community.community-overview .beyond-photo{display:block}
+#community.community-overview .beyond-photo img{width:100%;height:auto;display:block;opacity:1;filter:none;transform:none}
+#community.community-overview figcaption{font-size:11.5px;line-height:1.6;color:var(--muted);margin-top:11px}
+#community.community-overview .beyond-project-copy{display:flex;flex-direction:column;flex:1;padding-top:23px}
+#community.community-overview .beyond-label{font-size:11px;line-height:1.6;letter-spacing:1.1px;font-weight:550;color:var(--muted);margin:0 0 9px}
+#community.community-overview h3{font-size:30px;line-height:1.3;font-weight:550;margin:0 0 16px;letter-spacing:-.2px}
+#community.community-overview .beyond-summary{font-size:16px;line-height:1.75;margin:0 0 23px}
+#community.community-overview h4{font-size:15.5px;line-height:1.45;font-weight:550;margin:0 0 7px;color:var(--gold)}
+#community.community-overview .beyond-classroom-note p{font-size:15px;line-height:1.75;margin:0}
+#community.community-overview .beyond-activities-label{font-size:11.5px;line-height:1.6;font-weight:550;letter-spacing:.4px;color:var(--muted);margin:0 0 16px}
+#community.community-overview .btb-activity-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:18px 24px}
+#community.community-overview .btb-activity-list li{min-width:0}
+#community.community-overview .btb-activity-list p{font-size:12px;line-height:1.65;margin:0;color:#b9ac91}
+#community.community-overview .beyond-project-links{display:flex;gap:14px 25px;flex-wrap:wrap;align-items:baseline;padding-top:27px;margin-top:auto}
+#community.community-overview .beyond-project-links a{font-size:12px}
+#community.community-overview .beyond-jumps{display:none}
+@media(max-width:1050px) and (min-width:901px){#community.community-overview .beyond-grid{gap:30px}#community.community-overview h3{font-size:27px}#community.community-overview .btb-activity-list{gap:16px}#community.community-overview h4{font-size:14.5px}}
+@media(max-width:900px){#community.community-overview .beyond-grid{grid-template-columns:1fr;gap:48px}#community.community-overview .beyond-jumps{display:flex;margin:0 0 24px;gap:15px 26px;flex-wrap:wrap;justify-content:flex-start;font-size:12px;font-weight:550}#community.community-overview .beyond-jumps a{color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:4px}#community.community-overview h3{font-size:28px}}
+@media(max-width:450px){#community.community-overview .btb-activity-list{grid-template-columns:1fr;gap:16px}#community.community-overview .beyond-summary{font-size:16px}#community.community-overview .beyond-project-links{padding-top:23px}}
