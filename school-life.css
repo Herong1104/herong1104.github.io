@@ -32,3 +32,16 @@
 .school-photo-archive{margin-top:60px;color:var(--gold);font-size:13px}
 @media(max-width:900px){.school-interview,.school-event-entry{grid-template-columns:1fr;gap:28px}.school-club .story-lead{grid-template-columns:1fr}.school-club-emblem{width:115px}.school-choir-photo{max-width:650px}}
 @media(max-width:650px){.school-life .page-heading h1{font-size:37px}.school-life .section-nav{gap:10px 23px}.school-life .school-work-title{font-size:25px}.school-singing-pair{gap:16px}.school-singing-pair figcaption{font-size:10px}.school-interview{padding-top:55px}.school-interview h2{font-size:28px}.school-event-entry h3,.school-other h3{font-size:24px}.nov9-detail-pair{grid-template-columns:1fr;gap:25px}.nov9-detail-pair figure:first-child{max-width:390px;margin:auto}.school-community-entry .school-entry h3{font-size:26px!important}}
+
+/* Choir spacing after the business-club section. */
+.school-life #school-choir{padding-top:75px}
+.school-life #school-choir>.section-heading{margin-bottom:12px}
+.school-life #school-choir>.section-heading h2{margin-bottom:0}
+@media(max-width:650px){
+ .school-life #school-choir{padding-top:50px}
+ .school-life #school-choir>.section-heading{margin-bottom:10px}
+}
+
+/* Interview text precedes the original photograph; retain the existing column widths. */
+.school-life #school-interview{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}
+@media(max-width:900px){.school-life #school-interview{grid-template-columns:1fr}}
