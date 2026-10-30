@@ -1,0 +1,71 @@
+/* Added stories only; established typography, theme, performances and manuscript styles remain in use. */
+.story-media{width:100%;min-width:0;margin:0}
+.story-media-screen{position:relative;background:#080807;aspect-ratio:16/9}
+.story-media-screen video{display:block;width:100%;height:100%;object-fit:contain;background:#080807}
+.story-media-launch{position:absolute;inset:0;width:100%;display:flex;gap:13px;align-items:center;justify-content:center;background:linear-gradient(0deg,rgba(0,0,0,.47),transparent 65%);color:#fff7df;font-size:14px;font-weight:600;text-shadow:0 1px 8px #000;border:0;cursor:pointer}
+.story-media-launch:hover{background-color:rgba(0,0,0,.12)}
+.story-play-symbol{display:grid;place-items:center;width:52px;height:52px;border:1px solid #fff1cb;border-radius:50%;font-size:15px;padding-left:2px}
+.story-duration{font-size:12px;font-variant-numeric:tabular-nums}
+.story-media-tools{display:flex;justify-content:space-between;flex-wrap:wrap;gap:5px 16px;padding:8px 0 0;font-size:11px;line-height:1.7;color:var(--muted)}
+.story-media-direct,.story-media-retry{min-height:32px;display:inline-flex;align-items:center;color:var(--gold);font:inherit;background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:4px}
+.story-media [hidden]{display:none!important}
+.story-media-status:empty{display:none}
+.story-media-status{flex:1;min-width:130px}
+.story-media-direct{margin-left:auto}
+.story-media button:focus-visible,.story-gallery a:focus-visible,.story-press a:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+.story-page-intro{max-width:810px;font-size:17px;line-height:1.85;margin:0 0 30px}
+.story-press{display:flex;flex-wrap:wrap;gap:8px 26px;margin:20px 0 34px;padding:18px 0;border-block:1px solid var(--line)}
+.story-press>a{font-size:12px;line-height:1.8;min-height:36px;display:flex;align-items:center}
+.story-press-label{flex-basis:100%;font-size:11px;letter-spacing:1px;color:var(--muted);margin-bottom:2px}
+.story-school .story-lead{display:grid;grid-template-columns:1fr 1.65fr;gap:65px;margin-bottom:38px}
+.story-school h2{font-size:34px;line-height:1.35;margin-bottom:20px}
+.story-school .story-lead p{font-size:15px;line-height:1.9;margin:0 0 20px}
+.story-school .story-film{margin:30px 0 30px}
+.story-large-photo{margin:34px 0 22px}
+.story-large-photo img,.story-gallery img{display:block;width:100%;height:auto}
+.story-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:25px 22px;margin-top:24px}
+.story-gallery figure{margin:0;min-width:0}
+.story-gallery a{display:block}
+.story-gallery figcaption{font-size:11px;line-height:1.6}
+.story-school .choir-story{margin-top:85px}
+.story-school .story-meta{font-size:13px;line-height:1.8;color:var(--muted)}
+.story-school .choir-note{max-width:790px;font-size:16px;line-height:1.85;margin:20px 0 30px}
+.school-entry{display:grid;grid-template-columns:1fr 1.6fr;align-items:center;gap:34px;margin-top:44px}
+.school-entry img{width:100%;height:auto;display:block}
+.school-entry h3{font-size:25px!important;line-height:1.4;margin:6px 0 13px!important}
+.school-entry p{font-size:14px;line-height:1.8;margin:0 0 15px}
+.school-entry .eyebrow{font-size:10px}
+.school-entry .text-link{font-size:12px}
+.story-classroom-archive{margin-top:28px}
+.story-classroom-archive summary{font-size:12px;color:var(--gold)}
+.story-classroom-archive img{max-width:100%;height:auto;margin-top:15px}
+.story-btb-film{margin:35px 0 0;max-width:790px;margin-left:auto}
+.story-btb-film h3{font-size:24px;margin-bottom:15px}
+.story-btb-film>p{font-size:13px;line-height:1.8;margin-bottom:20px}
+.story-recital{margin:30px 0 10px;max-width:850px}
+.story-handout{padding:32px 0 45px;scroll-margin-top:30px}
+.story-handout-lead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);gap:50px;align-items:center}
+.story-handout h2{font-size:31px;line-height:1.4;margin-bottom:20px}
+.story-handout p{font-size:15px;line-height:1.85;margin:0 0 19px}
+.story-handout img{display:block;width:100%;height:auto}
+.story-handout-actions{display:flex;flex-wrap:wrap;gap:8px 23px;margin-top:18px;font-size:13px}
+.story-pdf-pages{max-width:1100px;margin:35px auto 0;display:grid;gap:26px}
+.story-pdf-pages figure{margin:0;background:#fff}
+.story-pdf-pages figcaption{background:var(--bg,#11110f);padding:8px 0;margin:0}
+.story-pdf-object{width:100%;height:80vh;border:0;margin-top:20px;background:#fff}
+.notes-reader{max-width:1180px;margin:0 auto;padding:0 0 70px}
+.notes-reader .page-heading{padding-top:45px}
+.notes-reader-controls{display:flex;gap:12px 20px;align-items:center;flex-wrap:wrap;margin:25px 0 16px;font-size:13px}
+.notes-reader-controls button,.notes-reader-controls select{font:inherit;color:var(--gold);background:var(--bg,#11110f);border:1px solid var(--line);padding:10px 15px;min-height:44px}
+.notes-reader-controls button:disabled{opacity:.4;cursor:default}
+.notes-reader-figure{margin:0;background:#fff}
+.notes-reader-figure img{display:block;width:100%;height:auto}
+@media(max-width:650px){.archive-page.notes-reader{margin-inline:24px}}
+.notes-reader-status{font-size:12px;color:var(--muted);line-height:1.8;min-width:100px}
+.notes-topics{display:flex;flex-wrap:wrap;gap:6px 20px;margin:25px 0 15px}
+.notes-topics button{font:inherit;font-size:13px;line-height:1.7;background:transparent;border:0;padding:7px 0;color:var(--gold);min-height:40px;text-decoration:underline;text-underline-offset:5px;cursor:pointer}
+.story-handout details{margin-top:24px}
+.story-handout summary{font-size:14px;color:var(--gold)}
+.story-handout-home{display:inline-block;margin-top:13px;font-size:13px}
+@media(max-width:900px){.story-school .story-lead{grid-template-columns:1fr;gap:10px}.story-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:23px 17px}.story-gallery figure:nth-child(4){grid-column:auto}.story-handout-lead{grid-template-columns:1fr;gap:28px}.school-entry{grid-template-columns:1fr 1.4fr;gap:25px}}
+@media(max-width:600px){.story-gallery{grid-template-columns:1fr;gap:24px}.school-entry{grid-template-columns:1fr;gap:20px}.story-school h2{font-size:29px}.story-school .page-heading h1{font-size:40px}.story-school .choir-story{margin-top:55px}.story-media-launch{font-size:13px}.story-play-symbol{width:45px;height:45px}.story-handout h2{font-size:28px}.story-pdf-object{height:65vh}.story-press{gap:7px 20px}}

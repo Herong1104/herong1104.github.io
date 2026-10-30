@@ -1,0 +1,34 @@
+/* Homepage Biography and Mathematics entrances only. */
+#introduction.home-priorities{padding-top:60px;padding-bottom:15px;scroll-margin-top:35px}
+#introduction .home-priority-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:stretch}
+#introduction .home-priority-panel{display:flex;flex-direction:column;min-width:0;scroll-margin-top:35px}
+#introduction .priority-eyebrow{font-size:10px;line-height:1.7;letter-spacing:1.6px;font-weight:500;color:var(--muted);margin:0 0 24px}
+#introduction .home-priority-panel h2{font-size:39px;line-height:1.4;font-weight:550;letter-spacing:-.35px;margin:0;min-height:2.8em}
+#introduction .priority-subtitle{font-size:13px;line-height:1.9;color:var(--gold);margin:17px 0 23px}
+#introduction .priority-copy>p{font-size:17px;line-height:1.85;text-align:left;font-weight:450;margin:0 0 17px}
+#introduction .priority-copy .manuscript-language-note{font-size:11px;color:var(--muted);font-weight:400;margin:19px 0 0;line-height:1.8}
+#introduction .priority-actions{display:flex;align-items:baseline;flex-wrap:wrap;gap:16px 26px;padding-top:24px;margin-top:auto}
+#introduction .priority-actions .text-link{font-size:12px;margin-top:0;align-self:flex-start}
+@supports(grid-template-rows:subgrid){
+ #introduction .home-priority-grid{grid-template-rows:repeat(5,auto);row-gap:0}
+ #introduction .home-priority-panel{display:grid;grid-template-rows:subgrid;grid-row:1 / span 5}
+ #introduction .biography-entry{grid-column:1}
+ #introduction .mathematical-entry{grid-column:2}
+ #introduction .priority-actions{margin-top:0}
+}
+@media(max-width:1050px){#introduction .home-priority-grid{column-gap:42px}#introduction .home-priority-panel h2{font-size:33px}}
+@media(max-width:900px){
+ #introduction .home-priority-grid{display:grid;grid-template-columns:1fr;gap:48px;grid-template-rows:none}
+ #introduction .home-priority-panel{display:flex;grid-row:auto;grid-column:auto}
+ #introduction .home-priority-panel h2{font-size:34px;min-height:0;max-width:640px}
+ #introduction .priority-actions{margin-top:0;padding-top:10px}
+}
+@media(max-width:650px){
+ #introduction.home-priorities{padding-top:40px;padding-bottom:5px}
+ #introduction .home-priority-grid{gap:42px}
+ #introduction .home-priority-panel h2{font-size:31px;line-height:1.4}
+ #introduction .priority-eyebrow{font-size:9px;margin-bottom:18px}
+ #introduction .priority-subtitle{margin:13px 0 20px}
+ #introduction .priority-copy>p{font-size:16px;line-height:1.9}
+ #introduction .priority-actions{gap:14px 23px}
+}
