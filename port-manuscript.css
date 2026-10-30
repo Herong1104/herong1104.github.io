@@ -1,0 +1,52 @@
+/* Scoped to the new port manuscript entry and reader. */
+.port-manuscript-entry{display:grid;grid-template-columns:minmax(160px,220px) minmax(0,1fr);gap:32px;align-items:center;margin:28px 0 38px;padding:0;min-width:0}
+.port-manuscript-cover{display:block;line-height:0;min-width:0;background:#fff}
+.port-manuscript-cover img{display:block;width:100%;height:auto}
+.port-manuscript-entry-copy{min-width:0}
+.research-reading .port-manuscript-kicker{font-size:11px;line-height:1.7;color:var(--muted);margin:0 0 12px}
+.research-reading .port-manuscript-entry h3{font-size:25px;line-height:1.4;margin:0 0 16px;letter-spacing:0}
+.research-reading .port-manuscript-authors{font-size:13px;line-height:1.8;margin:0 0 12px}
+.research-reading .port-manuscript-meta{font-size:11px;line-height:1.8;color:var(--muted);margin:0 0 19px}
+.port-manuscript-actions{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:12px;line-height:1.8}
+.port-manuscript-actions a{min-height:36px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:5px}
+.port-manuscript-page{max-width:1100px}
+.port-manuscript-page>.page-heading{max-width:860px;padding-top:38px;padding-bottom:22px}
+.port-manuscript-page .page-heading h1{font-size:36px;line-height:1.35;letter-spacing:-.25px;max-width:850px;margin:0 0 22px}
+.port-manuscript-page .page-heading .eyebrow{font-size:11px;letter-spacing:1px;line-height:1.8;margin-bottom:17px}
+.port-manuscript-byline{font-size:15px;line-height:1.9;margin:0 0 8px;color:var(--gold)}
+.port-manuscript-page .page-subtitle{font-size:12px;line-height:1.8;color:var(--muted);margin:0}
+.port-manuscript-intro{max-width:860px;font-size:14px;line-height:1.85}
+.port-manuscript-intro>p{margin:0 0 17px}
+.port-manuscript-affiliations{display:flex;flex-wrap:wrap;gap:12px 32px;font-size:12px;line-height:1.8;margin:0 0 22px}
+.port-manuscript-school{display:block;color:var(--muted);font-size:11px;line-height:1.8}
+.port-manuscript-intro>.text-link{display:inline-flex;align-items:center;min-height:40px;font-size:13px}
+.port-reader{max-width:860px;margin:24px auto 0}
+.port-reader-controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin:0 0 17px;font-size:13px;line-height:1.5}
+.port-reader-controls button,.port-reader-controls select{font:inherit;color:var(--gold);background:var(--bg,#11110f);border:1px solid var(--line);min-height:44px;padding:10px 15px}
+.port-reader-controls button{cursor:pointer}
+.port-reader-controls button:disabled{opacity:.4;cursor:default}
+.port-reader-select{display:flex;gap:9px;align-items:center}
+.port-reader-select>span{font-size:12px;color:var(--muted)}
+.port-reader-controls select{min-width:65px}
+.port-reader-status{font-size:12px;line-height:1.8;color:var(--muted);min-width:85px}
+.port-reader-figure{margin:0;background:#fff}
+.port-reader-figure a,.port-reader-figure img{display:block;width:100%;height:auto}
+.port-reader-hint,.port-reader-error{font-size:12px;line-height:1.85;color:var(--muted);margin:15px 0 0}
+.port-reader-error a{text-decoration:underline;text-underline-offset:4px}
+.port-reader [hidden]{display:none!important}
+.port-reader a:focus-visible,.port-reader button:focus-visible,.port-reader select:focus-visible,.port-manuscript-entry a:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+@media(max-width:650px){
+ .port-manuscript-entry{grid-template-columns:1fr;gap:22px;margin:23px 0 32px}
+ .port-manuscript-cover{width:180px;max-width:100%}
+ .research-reading .port-manuscript-entry h3{font-size:23px;line-height:1.45;margin-bottom:14px}
+ .port-manuscript-page .page-heading h1{font-size:28px;line-height:1.4;letter-spacing:0;margin-bottom:19px}
+ .port-manuscript-page>.page-heading{padding-top:30px;padding-bottom:20px}
+ .port-manuscript-byline{font-size:13px}
+ .port-manuscript-affiliations{gap:12px 24px}
+ .port-manuscript-intro{font-size:13px}
+ .port-reader{margin-top:22px}
+ .port-reader-controls{gap:10px 12px;font-size:12px}
+ .port-reader-controls button,.port-reader-controls select{padding-inline:11px}
+ .port-reader-status{flex-basis:100%}
+}
+@media(max-width:360px){.port-reader-controls{gap:10px 8px}.port-reader-select{gap:5px}.port-reader-controls button,.port-reader-controls select{padding-inline:8px}.port-reader-controls select{min-width:52px}}
