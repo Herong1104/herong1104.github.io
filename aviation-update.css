@@ -1,0 +1,12 @@
+.wind-data-update{margin:35px 0}
+.wind-visualizations{margin:48px 0}
+.wind-visualizations>p{font-size:13px;line-height:1.85;color:var(--muted)}
+.wind-figure-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 22px;margin:26px 0}
+.wind-figure-grid figure{margin:0;min-width:0}
+.wind-figure-grid a{display:block;background:#fff}
+.wind-figure-grid img{display:block;width:100%;height:auto}
+.wind-figure-grid figcaption{font-size:12px;line-height:1.8;color:var(--muted);margin:11px 0 0}
+.drone-proposal{margin:64px 0 20px;padding-top:12px;border-top:1px solid var(--line);scroll-margin-top:32px}
+.drone-proposal .proposal-status{font-size:13px;line-height:1.85;color:var(--gold)}
+.aviation-proposal-teaser{font-size:13px;line-height:1.8;color:var(--muted);margin-top:16px}
+@media(max-width:650px){.wind-figure-grid{grid-template-columns:1fr;gap:28px}.drone-proposal h2{font-size:23px}.wind-visualizations{margin:36px 0}}

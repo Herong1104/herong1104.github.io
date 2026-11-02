@@ -1,0 +1,41 @@
+/* Scoped additions for the new geometry entries and their page readers. */
+#geometry-notes{margin:56px 0 70px;padding-top:36px;border-top:1px solid var(--line)}
+#geometry-notes .geometry-notes-heading{max-width:850px;margin-bottom:25px}
+#geometry-notes .geometry-notes-heading h2{font-size:30px;line-height:1.35;margin:10px 0 12px}
+#geometry-notes .geometry-notes-heading>p:last-child{font-size:14px;line-height:1.85;color:var(--muted);margin:0}
+#geometry-notes .geometry-notes-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+#geometry-notes .geometry-note-card{min-width:0;border-bottom:1px solid var(--line);padding-bottom:25px}
+#geometry-notes .geometry-note-cover{display:block;background:#e8e6df;overflow:hidden}
+#geometry-notes .geometry-note-cover img{display:block;width:100%;height:auto;aspect-ratio:2526/1786;object-fit:contain}
+#geometry-notes .geometry-note-copy{padding-top:17px}
+#geometry-notes .geometry-note-meta{font-size:11px;line-height:1.8;letter-spacing:.6px;color:var(--muted);margin:0 0 8px}
+#geometry-notes .geometry-note-card h3{font-family:inherit;font-size:20px;font-weight:600;line-height:1.45;letter-spacing:0;margin:0 0 8px}
+#geometry-notes .geometry-note-card h3 a{color:var(--gold);text-decoration:none}
+#geometry-notes .geometry-note-original{font-size:12px;line-height:1.8;color:var(--muted);margin:0 0 12px}
+#geometry-notes .geometry-note-card .text-link{font-size:13px;line-height:1.8}
+#geometry-notes a:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+.geometry-notes-reader .page-heading h1{max-width:1000px;font-size:37px;line-height:1.4;letter-spacing:-.2px}
+.geometry-notes-reader .page-heading .eyebrow{font-size:11px;line-height:1.8}
+.geometry-notes-reader .original-notes-title{font-size:14px;line-height:1.85;color:var(--muted);margin:12px 0}
+.geometry-notes-reader .geometry-notes-intro{max-width:850px;font-size:14px;line-height:1.85;color:var(--muted);margin:16px 0 0}
+.geometry-notes-reader .notes-reader-figure img{display:block;max-width:100%;height:auto}
+.geometry-notes-reader .geometry-reader-hint{font-size:12px;line-height:1.85;margin:16px 0 0}
+.geometry-notes-reader .geometry-reader-error{font-size:13px;line-height:1.8;margin-top:18px}
+.geometry-notes-reader .geometry-reader-error p{margin:0 0 8px}
+.geometry-notes-reader .geometry-reader-error button{font:inherit;background:var(--bg,#11110f);color:var(--gold);border:1px solid var(--line);padding:10px 15px;min-height:44px;cursor:pointer}
+.geometry-notes-reader button:focus-visible,.geometry-notes-reader select:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+.geometry-notes-reader [hidden]{display:none!important}
+html[lang^="zh"] #geometry-notes .geometry-note-original,html[lang^="zh"] .geometry-notes-reader .original-notes-title{display:none}
+@media(max-width:650px){
+  #geometry-notes{margin:38px 0 50px;padding-top:28px}
+  #geometry-notes .geometry-notes-heading h2{font-size:25px}
+  #geometry-notes .geometry-notes-grid{grid-template-columns:minmax(0,1fr);gap:28px}
+  #geometry-notes .geometry-note-card h3{font-size:20px}
+  .geometry-notes-reader .page-heading h1{font-size:30px;line-height:1.4;letter-spacing:0}
+  .geometry-notes-reader .page-heading .eyebrow{font-size:10px}
+  .geometry-notes-reader .geometry-notes-intro{font-size:13px}
+  .geometry-notes-reader .notes-reader-controls{gap:10px 12px;font-size:12px}
+  .geometry-notes-reader .notes-reader-controls button,.geometry-notes-reader .notes-reader-controls select{padding-inline:11px;min-height:44px}
+  .geometry-notes-reader .notes-reader-status{flex-basis:100%}
+}
+@media(max-width:360px){.geometry-notes-reader .notes-reader-controls{gap:10px 8px}.geometry-notes-reader .notes-reader-controls button,.geometry-notes-reader .notes-reader-controls select{padding-inline:8px}}

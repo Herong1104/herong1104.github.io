@@ -1,0 +1,22 @@
+/* Additional styles apply only to the new learning-notes reader. */
+.logic-notes-reader .page-heading h1{max-width:1000px;font-size:37px;line-height:1.4;letter-spacing:-.2px}
+.logic-notes-reader .page-heading .eyebrow{font-size:11px;line-height:1.8}
+.logic-notes-reader .logic-notes-intro{max-width:850px;font-size:14px;line-height:1.85;color:var(--muted);margin:16px 0 0}
+.logic-notes-reader .notes-reader-figure img{max-width:100%;height:auto}
+.logic-notes-reader .logic-reader-hint{font-size:12px;line-height:1.85;margin:16px 0 0}
+.logic-notes-reader .logic-reader-error{font-size:13px;line-height:1.8;margin-top:18px}
+.logic-notes-reader .logic-reader-error p{margin:0 0 8px}
+.logic-notes-reader .logic-reader-error button{font:inherit;background:var(--bg,#11110f);color:var(--gold);border:1px solid var(--line);padding:10px 15px;min-height:44px;cursor:pointer}
+.logic-notes-reader button:focus-visible,.logic-notes-reader select:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+.logic-notes-reader [hidden]{display:none!important}
+@media(max-width:650px){
+ .logic-notes-reader .page-heading h1{font-size:30px;line-height:1.4;letter-spacing:0}
+ .logic-notes-reader .page-heading .eyebrow{font-size:10px}
+ .logic-notes-reader .logic-notes-intro{font-size:13px}
+ .logic-notes-reader .notes-reader-controls{gap:10px 12px;font-size:12px}
+ .logic-notes-reader .notes-reader-controls button,.logic-notes-reader .notes-reader-controls select{padding-inline:11px}
+ .logic-notes-reader .notes-reader-status{flex-basis:100%}
+ .logic-notes-reader .notes-topics{gap:4px 18px}
+ .logic-notes-reader .notes-topics button{font-size:12px;min-height:44px}
+}
+@media(max-width:360px){.logic-notes-reader .notes-reader-controls{gap:10px 8px}.logic-notes-reader .notes-reader-controls button,.logic-notes-reader .notes-reader-controls select{padding-inline:8px}}
