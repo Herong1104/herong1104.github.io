@@ -6,16 +6,22 @@
     playing:['',''], paused:['Paused.','已暂停。'],
     waiting:['Buffering…','正在缓冲……'],
     failed:['Unable to play here. Retry or open the video directly.','暂时无法在本页播放，请重试或直接打开视频。'],
-    decode:['This browser cannot decode this original recording. Try another browser or the direct link.','当前浏览器未能解码原视频，可尝试其他浏览器或直接链接。']
+    decode:['This browser cannot decode this original recording. Try another browser or the direct link.','当前浏览器未能解码原视频，可尝试其他浏览器或直接链接。'],
+    slow:['Still loading… You can keep waiting, retry or open the video directly.','仍在加载……你可以继续等待、重试或直接打开视频。']
   };
   function langIndex(){return document.documentElement.lang.startsWith('zh')?1:0;}
+  function pauseOthers(video){
+    if(typeof pauseOtherSiteVideos==='function') pauseOtherSiteVideos(video);
+    else document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();});
+  }
   blocks.forEach(block=>{
     const video=block.querySelector('video');
     const launch=block.querySelector('.story-media-launch');
     const retry=block.querySelector('.story-media-retry');
     const status=block.querySelector('.story-media-status');
     const direct=block.querySelector('.story-media-direct');
-    let state='playing', timer;
+    let state='playing', timer, attemptId=0, playId=0;
+    let removeMediaListeners=()=>{};
     function refresh(){
       const n=langIndex();
       status.textContent=states[state]?.[n]||'';
@@ -23,26 +29,55 @@
       launch.setAttribute('aria-label',(n?'播放：':'Play: ')+(n?video.dataset.labelZh:video.dataset.labelEn));
     }
     function setState(next){state=next;block.dataset.playbackState=next;refresh();}
-    function failure(next='failed'){clearTimeout(timer);retry.hidden=false;launch.hidden=true;setState(next);}
-    function start(){
-      clearTimeout(timer);retry.hidden=true;launch.hidden=true;video.setAttribute('controls','');setState('loading');
+    function current(id){return id===attemptId;}
+    function waitNotice(id){
+      clearTimeout(timer);
+      timer=setTimeout(()=>{
+        if(current(id)&&['loading','waiting','slow'].includes(state)){
+          retry.hidden=false;setState('slow');
+        }
+      },10000);
+    }
+    function failure(next='failed',id=attemptId){
+      if(!current(id))return;
+      clearTimeout(timer);retry.hidden=false;launch.hidden=true;setState(next);
+    }
+    function bindMediaEvents(id){
+      const listeners=[];
+      const on=(type,handler)=>{
+        const guarded=()=>{if(current(id))handler();};
+        video.addEventListener(type,guarded);listeners.push([type,guarded]);
+      };
+      on('playing',()=>{if(video.paused||video.readyState<2)return;clearTimeout(timer);retry.hidden=true;setState('playing');pauseOthers(video);});
+      on('pause',()=>{
+        if(!video.paused)return;
+        clearTimeout(timer);playId+=1;
+        if(!video.ended&&!['failed','decode'].includes(state))setState(video.readyState>=2?'paused':'ready');
+      });
+      on('ended',()=>{clearTimeout(timer);setState('ready');});
+      on('loadedmetadata',()=>{if(video.readyState>=1&&video.paused&&!video.error){clearTimeout(timer);setState('ready');}});
+      on('waiting',()=>{if(!video.paused){setState('waiting');waitNotice(id);}});
+      on('stalled',()=>{if(!video.paused&&video.readyState<3){setState('waiting');retry.hidden=false;waitNotice(id);}});
+      on('error',()=>{if(video.error)failure(video.error.code===3?'decode':'failed',id);});
+      removeMediaListeners=()=>listeners.forEach(([type,handler])=>video.removeEventListener(type,handler));
+    }
+    function start(reset=false){
+      const id=++attemptId, playAttempt=++playId;
+      clearTimeout(timer);removeMediaListeners();video.pause();
+      retry.hidden=true;launch.hidden=true;video.setAttribute('controls','');setState('loading');
+      if(reset)video.removeAttribute('src');
+      bindMediaEvents(id);
       if(!video.getAttribute('src')){video.src=video.dataset.source;video.preload='metadata';video.load();}
       direct.href=video.dataset.source;
+      pauseOthers(video);waitNotice(id);
       try { video.play()?.catch(error=>{
-        if(error.name==='AbortError')return;
-        if(error.name==='NotAllowedError'){setState('ready');return;}
-        failure(video.error?.code===3||error.name==='NotSupportedError'?'decode':'failed');
-      });}catch(error){failure();}
+        if(!current(id)||playAttempt!==playId||error.name==='AbortError')return;
+        if(error.name==='NotAllowedError'){clearTimeout(timer);setState('ready');return;}
+        failure(video.error?.code===3?'decode':'failed',id);
+      });}catch(error){failure(video.error?.code===3?'decode':'failed',id);}
     }
-    launch.addEventListener('click',start);
-    retry.addEventListener('click',()=>{video.removeAttribute('src');video.load();start();});
-    video.addEventListener('playing',()=>{clearTimeout(timer);retry.hidden=true;setState('playing');blocks.forEach(other=>{if(other!==block)other.querySelector('video').pause();});});
-    video.addEventListener('pause',()=>{if(video.readyState>=2&&!video.ended)setState('paused');});
-    video.addEventListener('ended',()=>setState('ready'));
-    video.addEventListener('loadedmetadata',()=>{if(video.paused&&!video.error)setState('ready');});
-    video.addEventListener('waiting',()=>{setState('waiting');clearTimeout(timer);timer=setTimeout(()=>{if(state==='waiting')retry.hidden=false;},10000);});
-    video.addEventListener('stalled',()=>{if(video.readyState<3){setState('waiting');retry.hidden=false;}});
-    video.addEventListener('error',()=>failure(video.error?.code===3?'decode':'failed'));
+    launch.addEventListener('click',()=>start());
+    retry.addEventListener('click',()=>start(true));
     document.addEventListener('languagechange',refresh);
     refresh();
   });
